@@ -45,3 +45,13 @@ uvicorn main:app --reload
 
 - `backend/` – FastAPI app (`main.py`)
 - `extension/` – Chrome extension (manifest, popup, scripts)
+
+## Why I built this
+I built Tably because I constantly found myself drowning in open browser tabs and manually trying to remember what each one was about and which ones actually mattered. Instead of just relying on a basic tab closer, I wanted to explore how modern AI could understand page content and help make smarter decisions: group similar tabs, summarize them, and highlight what deserves attention right now.
+
+This project was also a way to combine several skills in one place:
+1. Browser UX – building a real Chrome extension that fits naturally into everyday browsing.
+2. Backend & APIs – designing a FastAPI service that talks to the extension and processes tab data.
+3. Practical AI/NLP – using embeddings, clustering, and summarization to turn raw page text into something actionable for a user.
+
+Tably is both a tool that genuinely helps with my own messy browsing habits and a showcase of how to turn AI concepts into a polished, end‑to‑end product.
