@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tably</title>
+    <style>
+      :root {
+        --tably-bg: #f5f5f7;
+        --tably-primary: #3b82f6;
+        --tably-primary-soft: #dbeafe;
+        --tably-success-soft: #dcfce7;
+        --tably-success-border: #22c55e;
+        --tably-muted: #6b7280;
+        --tably-border: #e5e7eb;
+        --tably-danger-soft: #f3f4f6;
+        --tably-text: #111827;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 10px;
+        min-width: 320px;
+        max-width: 380px;
+        background: var(--tably-bg);
+        color: var(--tably-text);
+      }
+
+      h1 {
+        font-size: 18px;
+        margin: 0 0 4px;
+        color: var(--tably-primary);
+        font-weight: 700;
+      }
+
+      p.subtitle {
+        margin: 0 0 10px;
+        font-size: 12px;
+        color: var(--tably-muted);
+      }
+
+      button {
+        padding: 6px 10px;
+        border-radius: 6px;
+        border: 1px solid var(--tably-primary);
+        background: var(--tably-primary);
+        color: #ffffff;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #2563eb;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid var(--tably-border);
+        margin: 10px 0;
+      }
+
+      #backendOutput {
+        margin-top: 4px;
+        font-size: 12px;
+        color: var(--tably-muted);
+      }
+
+      .tably-summary {
+        margin-top: 8px;
+        font-size: 13px;
+      }
+
+      .tably-summary strong {
+        color: var(--tably-primary);
+      }
+
+      .tably-section-title {
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--tably-muted);
+      }
+
+      .tably-tab-card {
+        margin-top: 6px;
+        padding: 6px 8px;
+        border-radius: 8px;
+        border: 1px solid var(--tably-border);
+        background: #ffffff;
+        font-size: 12px;
+      }
+
+      .tably-tab-card.read_now {
+        border-color: var(--tably-success-border);
+        background: var(--tably-success-soft);
+      }
+
+      .tably-tab-card.close_candidate {
+        background: var(--tably-danger-soft);
+      }
+
+      .tably-tab-title {
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+
+      .tably-tab-meta {
+        font-size: 11px;
+        color: var(--tably-muted);
+        margin-bottom: 2px;
+      }
+
+      .tably-tab-summary {
+        font-size: 11px;
+        color: var(--tably-text);
+        margin-bottom: 4px;
+      }
+
+      .tably-chip {
+        display: inline-block;
+        padding: 1px 6px;
+        border-radius: 999px;
+        border: 1px solid var(--tably-border);
+        font-size: 10px;
+        margin-right: 4px;
+        background: #ffffff;
+      }
+
+      .tably-chip.read_now {
+        background: var(--tably-success-soft);
+        border-color: var(--tably-success-border);
+      }
+
+      .tably-chip.save_for_later {
+        background: var(--tably-primary-soft);
+        border-color: var(--tably-primary);
+      }
+
+      .tably-chip.close_candidate {
+        background: var(--tably-danger-soft);
+      }
+
+      .tably-actions {
+        margin-top: 4px;
+        display: flex;
+        gap: 4px;
+      }
+
+      .tably-actions button {
+        flex: 1;
+        padding: 3px 4px;
+        font-size: 11px;
+        border-radius: 4px;
+      }
+
+      .tably-actions button.secondary {
+        background: #ffffff;
+        color: var(--tably-primary);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tably</h1>
+    <p class="subtitle">AI helper for your messy tabs.</p>
+
+    <button id="refreshButton">Refresh analysis</button>
+
+    <hr />
+
+    <button id="backendButton">Check backend</button>
+    <div id="backendOutput"></div>
+
+    <div id="analysisContainer"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
