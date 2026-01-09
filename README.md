@@ -1,6 +1,6 @@
 # Tably – AI Tab Assistant
 
-Tably is a Chrome extension + FastAPI backend that helps you manage too many browser tabs.
+Tably is a Chrome extension + FastAPI backend that helps you manage too many browser tabs whether its your Music tab, Socials or even your Video tab
 
 ## What it does
 
