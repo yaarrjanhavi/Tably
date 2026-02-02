@@ -5,7 +5,7 @@ Tably is a Chrome extension + FastAPI backend that helps you manage too many bro
 ## What it does
 
 - Groups tabs by topic using text embeddings.
-- Scores tabs as **Read now**, **Save for later**, or **Maybe Close**.
+- Scores tabs as **Read Now**, **Save For Later**, or **Maybe Close**.
 - Shows short summaries for each tab.
 - Lets you focus or close tabs directly from the popup.
 
