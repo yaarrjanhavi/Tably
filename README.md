@@ -44,7 +44,7 @@ uvicorn main:app --reload
 ## Folder structure
 
 - `backend/` – FastAPI app (`main.py`)
-- `extension/` – Chrome extension (manifest, popup, scripts)
+- `extension/` – Chrome extension (manifest, popup, scripts, etc.)
 
 ## Why I built this
 I built Tably because I constantly found myself drowning in open browser tabs and manually trying to remember what each one was about and which ones actually mattered. Instead of just relying on a basic tab closer, I wanted to explore how modern AI could understand page content and help make smarter decisions: group similar tabs, summarize them, and highlight what deserves attention right now.
